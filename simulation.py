@@ -1,7 +1,5 @@
-import math
 import numpy as np
 import matplotlib.pyplot as plt
-import time
 import os
 
 cur_dir = os.path.dirname(os.path.realpath(__file__))
