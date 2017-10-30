@@ -113,11 +113,12 @@ if __name__ == '__main__':
         pnl_s2[i] += inventory_s2[i] * s
 
     x_range = [-50, 150]
-    y_range = [0, 180]
+    y_range = [0, 250]
     plt.figure(figsize=(16, 12), dpi=100)
-    plt.hist(pnl_s1, bins=30, alpha=0.25,
+    bins = np.arange(x_range[0], x_range[1] + 1, 4)
+    plt.hist(pnl_s1, bins=bins, alpha=0.25,
              label="Inventory strategy")
-    plt.hist(pnl_s2, bins=30, alpha=0.25,
+    plt.hist(pnl_s2, bins=bins, alpha=0.25,
              label="Symmetric strategy")
     plt.ylabel('P&l')
     plt.legend()
